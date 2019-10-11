@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Christopher's Awesome Website</title>
+		<style>
+            body {
+                background-image: url("https://i.imgur.com/hQ0B8gm.png");
+				background-repeat:no-repeat;
+				background-size:cover;
+                padding: 10px;
+                font-family: Verdana;
+            }
+            header {
+                font-size: 1.5em;
+                font-weight: bold;
+            }
+            #all-contents {
+                max-width: 800px;
+                margin: auto;
+            }
+
+            /* navigation menu */
+            nav {
+                background: rgb(240, 60, 60);
+                margin: 0 auto;
+				margin-bottom: 15px;
+				border: 2px solid orange;
+				border-radius: 10px;
+                display: flex;
+                padding: 10px;
+            }
+            nav header {
+                display: flex;
+                align-items: center;
+                color: rgb(255, 255, 255);
+                flex: 1;
+            }
+            nav ul {
+                list-style-image: none;
+            }
+            nav li {
+                display: inline-block;
+                padding: 0 10px;
+            }
+            nav a {
+                text-decoration: none;
+                color: #fff;
+            }
+
+            /* main container area beneath menu */
+            main {
+                background: rgb(60, 200, 249);
+                display: flex;
+				border-radius: 5px;
+				border: .5px solid green;
+            }
+            .sidebar {
+                margin-right: 25px;
+                padding: 10px;
+            }
+            .sidebar img {
+				border: 1px solid green;
+				border-radius: 10px;
+                width: 200px;
+            }
+            .content {
+                flex: 1;
+                padding: 15px;
+            }
+            .interests header {
+                font-size: 1.25em;
+            }
+		</style>
+	</head>
+	<body>
+		<div id="all-contents"> 
+			<nav>
+				<header>Christopher's Awesome Website</header>
+				<ul>
+					<li>
+						<a href="index.html">Home</a>
+					</li>
+					<li>
+						<a href="portfolio.html">Portfolio</a>
+					</li>
+				</ul>
+			</nav>
+
+			<main>
+				<div class="sidebar">
+					<img src="https://i.imgur.com/Z5eCgjr.jpg">
+					</div>
+
+					<div class="content">
+						<header>Christopher LeBoeuf</header>
+						<p>Student at Operation Spark</p>
+						<section class="interests">
+							<header>Interests</header>
+							<ul>
+								<li>Rocket League</li>
+								<li>Anime</li>
+								<li>Listening to music</li>
+							</ul>
+						</section>
+					</div>
+				</main>
+			</div>
+		</body>
+	</html>
