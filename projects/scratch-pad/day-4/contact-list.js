@@ -84,11 +84,11 @@ function makeContactList() {
                 contactList += (contacts[i].nameFirst + ' ' + contacts[i].nameLast) + '\n';
             }
             //remove last character because there would be an extra new line character
-            contactList = contactList.substring(0, contactList.length - 1);
+            contactList = contactList.slice(0, -1);
             //return the list of all contact names
             return contactList;
         },
-    }
+    };
 }
 
 
