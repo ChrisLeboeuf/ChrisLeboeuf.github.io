@@ -112,7 +112,7 @@ console.log(str.split(' '));//Logs ['HENLO', 'WORLD']
 console.log(str.substr(1, 4));//Logs 'ENLO'
 
 //substring() extracts the characters from a string, between two specified indices.
-console.log(1, 4);// Logs 'ENL'
+console.log(str.substring(1, 4));// Logs 'ENL'
 
 //toLocaleLowerCase() converts a string to lowercase letters, according to the host's locale.
 console.log(str.toLocaleLowerCase());//Logs 'henlo world'
