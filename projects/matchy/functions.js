@@ -17,11 +17,16 @@ function search(animals, name){
     //search through animals using a for loop
     for(let i = 0; i < animals.length; i++){
         //if animals name matches the name give
-        if(animals[i].name.toLowerCase() === name.toLowerCase()){
+        if(animals[i].name === name){
             //set matching animal to animal var
             animal = animals[i];
         }
     }
+
+//var animal = animals.find(anim => anim.name === name);
+//if(animal === undefined){
+//    animal = null;
+//}
     //return matching animal
     return animal;
 }
