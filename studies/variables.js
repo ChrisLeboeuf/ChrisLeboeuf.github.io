@@ -55,11 +55,19 @@ myVariable = "someString";
  */
 // Examples //
 
-//var is hoisted to the global scope
+//var is not specifically scoped, so it can be found in the global scope
 for(var i = 0; i < 3; i++){/*do something*/}
 console.log(i); // prints 3
 
-//let is no hoisted, so it cannot be accesed outside of this local scope
+//Variables are hoisted in JS
+x = 5;
+console.log(x); // prints 5
+var x;
+//This would work the same way if the assignment and declaration were flipped.
+ 
+//LET AND CONST ARE NOT HOISTED
+
+//let is scoped to its code block, so it cannot be accesed outside of this local scope
 for(let j = 0; j < 3; j++){/*do something*/}
 //console.log(j); // prints ReferenceError: 'j is not defined'
 

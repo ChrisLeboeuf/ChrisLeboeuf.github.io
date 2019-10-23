@@ -1,7 +1,7 @@
 /*
  * FUNCTIONS:
  * 
- * Functions allow us to encaosulate and execute code as needed.
+ * Functions allow us to encapsulate and execute code as needed.
  * Functions must first be declared/defined, then the function must be called/invoked.
  * Functions recieve inputs/placeholders also known as parameters. Those place holders
  * will be replaced with arguments at call time. Functions can either be named or assigned

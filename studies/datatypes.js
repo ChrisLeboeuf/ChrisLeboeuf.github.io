@@ -25,12 +25,13 @@
 // EXAMPLES //
 /*
  * Number: Simple data type. You cannot start a variable name with a number.
+ * Can be negative. Can be non-whole.
  */
 // Copy by value example //
-let num1 = 1;
+let num1 = -1.3;
 let num2 = num1;    //the value stored in num1 has been COPIED to num2
-num2 = 2;           //changing num2s value doesn't affect num1
-console.log(num1);  //Logs 1
+num2 = 2.111;       //changing num2s value doesn't affect num1
+console.log(num1);  //Logs -1.3
 
 // The same goes when passing values into functions //
 function add(num){ num += 1;}
@@ -72,7 +73,9 @@ let failedClone = clone * 2;
 console.log(failedClone);//Logs NaN
 
 /*
- *  +/-Infinity: Simple data type. +/-Infinity is a number greater/smaller than any other number.
+ * +/-Infinity: Simple data type. +/-Infinity is a number greater/smaller than any other number.
+ * +/-Infinity is displayed when a number exceeds the upper/lower limit of the floating point numbers.
+ * floating point limi is +/-1.797693134862315E+308.
  */
 Number.POSITIVE_INFINITY;
 Number.NEGATIVE_INFINITY;
@@ -112,4 +115,4 @@ function doSomething(param1, param2){
     console.log(param1 + param2);
     return param1 + param2;
 }
-doSomething();//logs 3
+doSomething(1, 2);//logs 3

@@ -23,7 +23,18 @@ let obj = {name: 'Chris', age: 19};
 
 // Just to make things easier. Think of each space in the comments as a new line.
 
-//for loops
+/*
+ * for loops:
+ * Syntax for for loops is as follows
+    
+    for(initialExpression; condition; iterator){
+        code block
+    }
+    
+ * initialExpression: Initializes any loop counters.
+ * condition: Tells the loop when to stop.
+ * iterator: Increments the initial expression until the condition is met.
+ */
 // Looping forward //
 for(let i = 0; i < str.length; i++){
     console.log(str[i]);//Logs B e a n s
@@ -34,7 +45,16 @@ for(let i = arr.length -1; i > -1; i--){
     console.log(arr[i]);//Logs 5 4 3 2 1
 }
 
-//While loops
+/*
+ * while loops:
+ * Syntax for while loops is as follows:
+    
+    while(condition){
+        code block
+    }
+    
+ * while statement loops as long as a specified condtion is true
+ */
 // Looping forward //
 let i = 0;
 while(i < arr.length){
@@ -49,7 +69,17 @@ while(j > -1){
     j--;
 }
 
-//for-in loops
+/*
+ * for-in loops
+ * Sytax for for-in loops is as follows
+    
+    for(variable in object){
+        code block
+    }
+    
+ * variable: a different property name is assigned to a variable on each iteration
+ * object: object to be iterated over
+ */
 // Gettings keys //
 for(let key in obj){
     console.log(key);//Logs name age

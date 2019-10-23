@@ -31,7 +31,19 @@ if(truthy === false){
     console.log('Facts');
 }
 
-/*
+/* 
+ * if statement syntax is as follows:
+
+    if(condition){
+        code block
+    } else if (condition){
+        code block
+    } else {
+        code block
+    }
+
+ * Ultimately there can be any ammount of else-if statements, but
+ * in this example there is only one.
  * The first statement fails, so it continues to move on until
  * it finds a statement that is true. Because the second statement is true,
  * 'The weather looks great!' gets logged to the console.
@@ -50,6 +62,24 @@ if(weather === 'cloudy'){
  * They can be a faster way of writing an if statement. The input
  * value must match the value of the case. In a sense, they are just another
  * way to write an if statement.
+ * 
+ * Syntax for switch statements are as follows
+ 
+    switch(expression){
+        case x:
+            code block
+            break;
+        case y:
+            code block
+            break;
+        default:
+            code block
+    }
+    
+ * There can be as many cases as you would like for the code to run through.
+ * Case works like if/else-if statements. Each case ends with a break.
+ * The break tells the code block for each case when to stop executing.
+ * Default works almost like an else statement.
  */
 
 //Because the first case is true, it logs 'The weather looks great!'
