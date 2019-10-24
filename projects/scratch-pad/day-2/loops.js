@@ -12,9 +12,7 @@
  */
 function printArrayValues(array) {
   // YOUR CODE BELOW HERE //
-  for(var i = 0; i < array.length; i++){
-      console.log(array[i])
-  }
+  array.forEach(function(val){console.log(val);});
   
   
   
@@ -27,9 +25,8 @@ function printArrayValues(array) {
  */
 function printArrayValuesInReverse(array) {
   // YOUR CODE BELOW HERE //
-    for(var i = array.length -1; i > -1; i--){
-      console.log(array[i]);
-  }
+  var reverse = array.reverse();
+  reverse.forEach(function(val){console.log(val);});
   
   
   
@@ -103,9 +100,7 @@ function getObjectLength(object) {
 function printObjectValuesInReverse(object) {
   // YOUR CODE BELOW HERE //
   var obj = Object.values(object).reverse();
-  for(var i = 0; i < obj.length; i++){
-    console.log(obj[i]);
-  }
+  return obj.forEach(function(val){console.log(val);});
   
   // YOUR CODE ABOVE HERE //
 }
