@@ -282,7 +282,7 @@ var flatten = function(arrays) {};
 
 // 30. Given a string, return an object containing tallies of each letter.
 // letterTally('potato'); // {'p':1, 'o':2, 't':2, 'a':1}
-var letterTally = function(str, obj = {}) {
+var letterTally = function(str, obj={}) {
   if (str.length === 0) return obj;
 
   obj[str[0]] ? obj[str[0]]++ : obj[str[0]] = 1;
@@ -333,13 +333,13 @@ var minimizeZeroes = function(array) {
 // alternateSign([2,7,8,3,1,4]) // [2,-7,8,-3,1,-4]
 // alternateSign([-2,-7,8,3,-1,4]) // [2,-7,8,-3,1,-4]
 var alternateSign = function(array) {
-  if (!array.length) {
+  if(!array.length){
     return [];
   }
-  if (array[0] < 0) {
+  if(array[0] < 0){
     array[0] = -array[0];
   }
-  if (array[1] > 0) {
+  if(array[1] > 0){
     array[1] = -array[1];
   }
   return [array[0], array[1]].concat(alternateSign(array.slice(2)));
@@ -348,26 +348,42 @@ var alternateSign = function(array) {
 // 35. Given a string, return a string with digits converted to their word equivalent.
 // Assume all numbers are single digits (less than 10).
 // numToText("I have 5 dogs and 6 ponies"); // "I have five dogs and six ponies"
-var numToText = function(str, result = '') {
-  const numberStrings = {
-    1: 'one',
-    2: 'two',
-    3: 'three',
-    4: 'four',
-    5: 'five',
-    6: 'six',
-    7: 'seven',
-    8: 'eight',
-    9: 'nine',
-    0: 'zero'
-  };
-
-  if (!str.length) return result;
+var numToText = function(str) {
+  if(!str.length) return '';
+    let myObj = {
+        1: 'one',
+        2: 'two',
+        3: 'three',
+        4: 'four',
+        5: 'five',
+        6: 'six',
+        7: 'seven',
+        8: 'eight',
+        9: 'nine',
+        0: 'zero'
+    };
+    //create variable set result to empty string
+    var result = "";
+    
+  //base case
+    if (str.length === 0) {
+        return result;
+    } else {
+        var currentChar = str.charAt(0);
+        if(myObj[currentChar]) {
+            result = result + myObj[currentChar];
+        }
+        else {
+            result = result + currentChar;
+        }
+    //return the recursive function with the substring 
+        return result + numToText(str.slice(1));
+        }
+    //call the recursive helper with str as input
+    // numToText(str);    
+    //finally return the result
+    // return result;
   
-  numberStrings[str[0]] ? result += numberStrings[str.charAt(0)] : result += str.charAt(0);
-  
-  return result + numToText(str.slice(1));
-
 };
 
 
